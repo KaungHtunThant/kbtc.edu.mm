@@ -1,0 +1,22 @@
+{% load static %}
+
+<script src="{% static 'backend/js/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'backend/js/common_scripts_min.js' %}"></script>
+<script src="{% static 'backend/js/functions.js' %}"></script>
+<script src="{% static 'backend/assets/validate.js' %}"></script>
+<script src="{% static 'backend/layerslider/js/greensock.js' %}"></script>
+<script src="{% static 'backend/layerslider/js/layerslider.transitions.js' %}"></script>
+<script src="{% static 'backend/layerslider/js/layerslider.kreaturamedia.jquery.js' %}"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        'use strict';
+        $('#layerslider').layerSlider({
+            autoStart: true,
+            responsive: false,
+            responsiveUnder: 1440,
+            layersContainer: 1170
+            // Please make sure that you didn't forget to add a comma to the line endings
+            // except the last line!
+        });
+    });
+</script>

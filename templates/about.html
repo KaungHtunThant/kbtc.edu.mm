@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load static %}
+{% block contents %}
+    <div id="full-slider-wrapper">
+        <div id="layerslider" style="width:100%;height:650px;">
+            <!-- first slide -->
+            <div class="ls-slide">
+                <img src="{% static 'backend/img/slides/slide_1.jpg' %}" class="ls-bg" alt="Slide background">
+                <h3 class="ls-l slide_typo" style="top: 45%; left: 50%;"
+                    data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">
+                    KBTC Group of Companies Limited</h3>
+                <h4 class="ls-l slide_typo" style="top: 52%; left: 50%;"
+                    data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
+                    A place where you can learn, grow and become a better professional.</h4>
+            </div>
+        </div>
+    </div><!-- End layerslider -->
+    <div id="position">
+        <div class="container">
+            <ul>
+                <li><a href="{% url 'backend:home' %}">Home</a></li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    </div><!-- Position -->
+    <div class="container_gray_bg">
+        <div class="container margin_60">
+            <div class="main_title">
+                <h2>Why choose KBTC ...</h2>
+                <p>State-of-the-art curriculums are developed and evaluated periodically to keep up with rapid changes
+                    in different sectors.
+                </p>
+                <p><b>Here's why you should study with us</b></p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <a class="box_feat">
+                        <i class="pe-7s-portfolio"></i>
+                        <h3>Professional Focus</h3>
+                        <p class="justified-text">We educate our students to emerge not just with a diploma, but with
+                            expertise and the readiness to enter the workplace. Our steadfast commitment to academic
+                            excellence is to enable our students to contribute to a global community.
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <a class="box_feat">
+                        <i class="pe-7s-star"></i>
+                        <h3>Skilled Team</h3>
+                        <p class="justified-text">Our staff, both academic and non-academic, are well-skilled,
+                            well-prepared, and devoted to giving students the best learning experience. We are committed
+                            to providing the best learning experience for our students..</p>
+                        <p></p>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <a class="box_feat">
+                        <i class="pe-7s-study"></i>
+                        <h3>Advanced teaching</h3>
+                        <p class="justified-text">Instructors use various types of interaction to ensure students have
+                            learned the material and to promote communicative skills. Teaching methods include group
+                            work, individual work, and self-study.</p>
+                    </a>
+                </div>
+            </div><!--End row-->
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <a class="box_feat">
+                        <i class="pe-7s-users"></i>
+                        <h3>Advanced study plans</h3>
+                        <p class="justified-text">Students have the privilege to take extra classes (of different
+                            intakes) from their respective lecturers apart from the regular classes so that students
+                            have chances to revise the lectures they have taken. </p>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <a class="box_feat">
+                        <i class="pe-7s-target"></i>
+                        <h3>Focus on target</h3>
+                        <p class="justified-text">Being proactive is how we were able to continue our classes through
+                            the pandemic. We tend to keep impacts from external factors (i.e., the geopolitical
+                            situation) at a minimum. Our focus is on the most important factors that affect our
+                            students.</p>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <a class="box_feat">
+                        <i class="pe-7s-graph1"></i>
+                        <h3>Focus on success</h3>
+                        <p class="justified-text">In order to achieve success, students must be able to work
+                            independently and effectively. We have a strong focus on the success of our students. There
+                            are two learning options available to students: Online/On Campus.</p>
+                    </a>
+                </div>
+            </div><!--End row-->
+            <br>
+            <div class="text-center"><a href="{% url 'backend:tour' %}" class=" button_outline large">Take a tour
+                of KBTC</a></div>
+
+        </div><!--End container -->
+    </div><!--End bg_gray_container -->
+
+    <div class="container margin_60">
+        <div class="main_title">
+            <h2>Some words about KBTC ...</h2>
+        </div>
+        <div class="row" style="text-align: justify">
+            <div class="col-md-8 col-sm-8">
+                <h3>Founded in 2016</h3>
+                <p>
+                    KBTC started off by offering exam preparation courses (i.e.) back in 2016. Diplomas courses were
+                    introduced subsequently and the student body has grown along the way. KBTC University is well-known
+                    for offering a wide range of academic and professional programs in the trendiest areas of
+                    specializations with our innovative teaching methods and professional academic staff. We've stayed
+                    true to our values which is to offer the students the best learning experience in order to gain
+                    expertise; enter and remain competitive in a dynamic community.
+                </p>
+                <p>
+                    KBTC University is one of the subsidiary schools of KBTC Group of Companies Limited, which comprises
+                    KBTC University, KBTC International Language School, and KBTC International School.
+                </p>
+
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="box_style_4">
+                    <h4>MISSION</h4>
+                    <p>
+                        We pledge to foster youngsters in cultivating excellence, and we thrive to promote this by
+                        enabling each individual to reach their greatest potential through pragmatic approaches.
+                    </p>
+                    <h4>VISION</h4>
+                    <p>
+                        Through nurturing devotees, we aspire to be a catalyst in contributing to our respective
+                        communities.
+                    </p>
+                    <h4>VALUES</h4>
+                    <p>
+                        We are driven by empowering a diverse student body to acquire, demonstrate, articulate, and
+                        value knowledge to enter and remain competitive in a dynamic global community.
+                    </p>
+                </div>
+            </div>
+        </div><!--End row -->
+        <hr class="more_margin">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <p><img src="{% static 'backend/img/campus.jpg' %}" alt="" class="img-responsive"></p>
+                <h4>Campus Area</h4>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <p><img src="{% static 'backend/img/activity.jpg' %}" alt="" class="img-responsive"></p>
+                <h4>Activities/Events</h4>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <p><img src="{% static 'backend/img/conference_hall.jpg' %}" alt="" class="img-responsive"></p>
+                <h4>Classrooms</h4>
+            </div>
+        </div><!--End row -->
+    </div><!--End container -->
+    <div class=" container_gray_bg">
+        <div class="container margin_60">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h3>Wanna see more? Check out our photo gallery here.</h3>
+                    <a href="{% url 'backend:gallery' %}">
+                        <button class="button">See More</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contents %}
+
+

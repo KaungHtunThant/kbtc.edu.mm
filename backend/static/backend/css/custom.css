@@ -1,0 +1,22 @@
+/* CUSTOM CSS HERE */
+
+h3 {
+    margin-top: 20px !important;
+}
+
+hr {
+    margin-bottom: 8px !important;
+}
+
+p {
+    line-height: 20px !important;
+    color: #000 !important;
+}
+
+p b {
+    font-size: 1.2em;
+}
+
+.banner p {
+    color: #FFFFFF !important;
+}

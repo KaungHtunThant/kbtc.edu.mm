@@ -1,0 +1,178 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="college, campus, university, courses, school, educational">
+    <meta name="description" content="KBTC - College, University and campus template">
+    <meta name="author" content="KBTC">
+    <title>KBTC - Group of Companies Limited</title>
+    <meta name="cf-2fa-verify" content="1b38920147ebc4c">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KWCLX9G');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="{% static 'backend/img/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon"
+          href="{% static 'backend/img/apple-touch-icon-57x57-precomposed.png' %}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72"
+          href="{% static 'backend/img/apple-touch-icon-72x72-precomposed.png' %}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+          href="{% static 'backend/img/apple-touch-icon-114x114-precomposed.png' %}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+          href="{% static 'backend/img/apple-touch-icon-144x144-precomposed.png' %}">
+
+    <!-- BASE CSS -->
+    <link rel="stylesheet" href="{% static 'backend/css/main_font/main_font.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/elegant_font/elegant_font.min.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/icon_font/pe-icon-7-stroke.min.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/fontello/css/fontello.min.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/edu_fonts/edu_fonts.min.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href={% static 'backend/layerslider/css/layerslider.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'backend/layerslider/skins/v5/skin.css' %}>
+    <!-- YOUR CUSTOM CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EP3NHNB8R0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-EP3NHNB8R0');
+    </script>
+
+    {% block specific_css %}
+    {% endblock specific_css %}
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWCLX9G"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="preloader">
+    <div class="pulse"></div>
+</div><!-- Pulse Preloader -->
+
+<!-- Header================================================== -->
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-9 col-xs-9">
+                <div id="logo">
+                    <a href="{% url 'backend:home' %}"><h4 style="font-family: 'Cinzel', serif; color: #fff">KBTC
+                        Group</h4>
+                        <h5 style="font-family: 'Cinzel', serif; color: #fff">of Companies Limited</h5></a>
+                </div>
+            </div>
+            <nav class="col-md-9 col-sm-3 col-xs-3">
+                <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
+                <div class="main-menu">
+                    <div id="header_menu">
+                        <h4 style="font-family: 'Cinzel', serif; color: #fff">KBTC University</h4>
+                    </div>
+                    <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
+                    <ul>
+                        <li><a href="{% url 'backend:home' %}">Home</a></li>
+                        {#                        <li class="submenu">#}
+                        {#                            <a href="javascript:void(0);" class="show-submenu">Schools <i class="icon-down-open-mini"></i></a>#}
+                        {#                            <ul>#}
+                        {#                                {% for school in schools %}#}
+                        {#                                    <li><a href="{% url 'backend:school_detail' school.id %}">{{ school.name }}</a></li>#}
+                        {#                                    <li><a href="#">{{ school.schoolName }}</a></li>#}
+                        {#                                {% endfor %}#}
+                        {#                            </ul>#}
+                        {#                        </li>#}
+                        <li class="megamenu submenu">
+                            <a href="javascript:void(0);" class="show-submenu-mega">Academic <i
+                                    class="icon-down-open-mini"></i></a>
+                            <div class="menu-wrapper">
+                                {% for degree in degrees %}
+                                    <div class="col-md-6">
+                                        <h3>{{ degree.degreeName }}</h3>
+                                        <ul>
+                                            {% for level in deg_lvl|get_item:degree %}
+                                                <li>
+                                                    <a href="{% url 'backend:degrees' degree.degreeName level.levelName %}">{{ level.levelName }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endfor %}
+                            </div><!-- End menu-wrapper -->
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);" class="show-submenu">About <i class="icon-down-open-mini"></i></a>
+                            <ul>
+                                <li><a href="{% url 'backend:about' %}">About us</a></li>
+                                <li><a href="{% url 'backend:FAQ' %}">FAQ</a></li>
+                                <li><a href="{% url 'backend:gallery' %}">Gallery</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'backend:degree_pathway' 'all' %}">Degree Pathway</a></li>
+                        <li><a href="{% url 'backend:tour' %}">Tour</a></li>
+                        <li><a href="{% url 'backend:contact' %}">Contact Us</a></li>
+                        <li><a href="#search" id="search_bt"><i class=" icon-search"></i><span>Search</span></a></li>
+                    </ul>
+                </div><!-- End main-menu -->
+            </nav>
+        </div>
+    </div><!-- container -->
+</header><!-- End Header -->
+{% block contents %}
+{% endblock contents %}
+{% include 'footer.html' %}
+<!-- Search modal -->
+<div id="search">
+    <button type="button" class="close">×</button>
+    <label>
+        <input type="search" value="" placeholder="type keyword(s) here" name="search_text">
+    </label>
+    <button class="button" onclick="search()">Search</button>
+</div>
+{% include 'common_scripts.html' %}
+{% block specific_scripts %}
+{% endblock specific_scripts %}
+<script>
+    function search() {
+        const search_text = document.getElementsByName('search_text')[0].value;
+        if (search_text === '') {
+            alert('Please enter a search term');
+            return false;
+        }
+        window.location.href = '{% url 'backend:search' %}?search_text=' + search_text;
+    }
+</script>
+</body>
+</html>

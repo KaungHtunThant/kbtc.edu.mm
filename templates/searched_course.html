@@ -1,0 +1,9 @@
+{% extends 'academic_single_course.html' %}
+
+{% block breadcrumb %}
+    <ul>
+        <li><a href="{% url 'backend:home' %}">Home</a></li>
+        <li><a href="javascript:history.back()">Search Results</a></li>
+        <li>{{ courseDetail.courseTitle }}</li>
+    </ul>
+{% endblock breadcrumb %}

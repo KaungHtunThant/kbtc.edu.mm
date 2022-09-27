@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load static %}
+{% block contents %}
+
+    <div class="sub_header bg_1">
+        <div id="intro_txt">
+            <h1>KBTC <strong>Diploma</strong> courses</h1>
+            <p>
+                Ex saepe accusata duo, vel ne summo option delenit.
+            </p>
+        </div>
+    </div><!--End sub_header -->
+
+    <div id="position">
+        <div class="container">
+            <ul>
+                <li><a href="{% url 'backend:home' %}">Home</a></li>
+                <li>Search Results</li>
+            </ul>
+        </div>
+    </div><!-- Position -->
+
+    <div class="container_gray_bg">
+        <div class="container margin_60">
+            <div class="row">
+                <div class="col-md-9">
+                    {% for course in courses %}
+                        <div class="strip_all_courses_list wow fadeIn" data-wow-delay="0.1s">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="img_list">
+                                        <a href="academic_single_course.html">{% image course.coursePhoto max-530x220 %}
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="clearfix visible-xs-block">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="course_list_desc">
+                                        <h3>{{ course.courseTitle }}</h3>
+                                        <p>
+                                            {{ course.overview|slice:"45:"|richtext|truncatewords_html:34 }}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                    <div class="details_list_col">
+                                        <div>
+                                            <a href="{% url 'backend:search_result' course.courseTitle %}"
+                                               class="button_outline">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--End strip -->
+
+                    {% endfor %}
+                </div><!--End col-md-9 -->
+
+                <aside class="col-md-3">
+                    <div class="banner">
+                        <i class=" iconcustom-school"></i>
+                        <h3>Take a campus tour</h3>
+                        <a href="{% url 'backend:tour' %}" class="banner_bt">Start tour</a>
+                    </div>
+                    <h3><strong>How to apply</strong></h3><br>
+                    <div class="box_side">
+                        <h5>By Phone</h5>
+                        <i class="icon-phone"></i>
+                        <p>
+                            <a href="tel://+959799606898">09 799 606 898</a><br>
+                            <a href="tel://+959777049551">09 777 049 551</a><br>
+                            <a href="tel://+959777049552">09 777 049 552</a><br>
+                            <small>Monday to Friday 9:00 am - 5:00 pm</small>
+                        </p>
+                    </div>
+                    <hr class="styled">
+                    <div class="box_side">
+                        <h5>By Email</h5>
+                        <i class="icon_pencil-edit"></i>
+                        <p>
+                            <a href="mailto:kbtcschoolofit@kbtc.edu.mm">kbtcschoolofit@kbtc.edu.mm</a><br>
+                        </p>
+                    </div>
+                    <hr class="styled">
+                    <div class="box_side">
+                        <h5>By Social Media</h5>
+                        <i class="icon-chat-5"></i>
+                        <p>
+                            <a href="https://www.facebook.com/KBTCUniversitySchoolofIT" target="_blank">Facebook</a><br>
+                            <a class="li-ic" href="https://www.linkedin.com/company/kbtc-college/" target="_blank">
+                                LinkedIn</a><br>
+                            <a class="ins-ic" href="https://www.instagram.com/kbtcuniversity_schoolofit/"
+                               target="_blank">
+                                Instagram</a>
+
+                        </p>
+                        <br>
+                    </div>
+                </aside>
+
+            </div><!--End row -->
+        </div><!--End container -->
+    </div><!--End container_gray_bg -->
+
+{% endblock contents %}

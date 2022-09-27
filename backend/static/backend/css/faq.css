@@ -1,0 +1,51 @@
+.faq {
+    margin-top: 50px;
+}
+
+.questions h4 {
+    font-weight: bold;
+}
+
+.questions {
+    cursor: pointer;
+    display: flex !important;
+    align-items: center !important;
+    border: 1px solid #F3F5F8;
+    background-color: #F3F5F8;
+    height: 60px;
+}
+.questions:hover {
+    background-color: #EFEFEF;
+}
+.questions .btn {
+    font-size: 30px;
+}
+
+.panel {
+    display: none;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .questions h4 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 469px) {
+    .questions h4 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .questions h4 {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .questions h4 {
+        font-size: 8px;
+    }
+}

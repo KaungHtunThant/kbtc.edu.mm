@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load wagtailcore_tags %}
+{% block specific_css %}
+    <link rel="stylesheet" href={% static 'backend/css/faq.css' %}>
+{% endblock %}
+{% block contents %}
+    <div id="full-slider-wrapper">
+        <div id="layerslider" style="width:100%;height:650px;">
+            <!-- first slide -->
+            <div class="ls-slide">
+                <img src="{% static 'backend/img/slides/slide_1.jpg' %}" class="ls-bg" alt="Slide background">
+                <h3 class="ls-l slide_typo" style="top: 45%; left: 50%;"
+                    data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">
+                    Frequently Asked Questions</h3>
+                <h4 class="ls-l slide_typo" style="top: 52%; left: 50%;"
+                    data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
+                    Answers to the most common questions about our services.</h4>
+            </div>
+        </div>
+    </div><!-- End layerslider -->
+
+    <div class="container_gray_bg">
+        <div id="position">
+            <div class="container">
+                <ul>
+                    <li><a href="{% url 'backend:home' %}">Home</a></li>
+                    <li>Frequently Asked Questions</li>
+                </ul>
+            </div>
+        </div><!-- Position -->
+
+    </div><!-- Position -->
+    <div class="container margin_60">
+        <div class="row">
+
+            <div class="col-md-9">
+                <div class="box_style_1">
+                    <div class="indent_title_in">
+                        <i class="pe-7s-news-paper"></i>
+                        <h3>FAQ</h3>
+                        <p>Frequently Asked Questions</p>
+                    </div>
+
+                    <div class="faq">
+                        {% for data in faq %}
+                            <div class="questions row" data-answerid="ans{{ data.pk }}" data-signid="sign{{ data.pk }}">
+                                <h4 class="col-xs-11">{{ data.Question }}</h4>
+                                <button class="accordion btn col-sm-1"><span id="sign{{ data.pk }}">+</span></button>
+                            </div>
+                            <div class="panel" id="ans{{ data.pk }}">
+                                <p>
+                                    {{ data.Answer | richtext }}
+                                </p>
+                            </div>
+                            <br>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <aside class="col-md-3">
+                <div class="banner">
+                    <i class=" iconcustom-school"></i>
+                    <h3>Take a campus tour</h3>
+                    <a href="{% url 'backend:tour' %}" class="banner_bt">Start tour</a>
+                </div>
+                <h3><strong>How to apply</strong></h3><br>
+                <div class="box_side">
+                    <h5>By Phone</h5>
+                    <i class="icon-phone"></i>
+                    <p>
+                        <a href="tel://+959799606898">09 799 606 898</a><br>
+                        <a href="tel://+959777049551">09 777 049 551</a><br>
+                        <a href="tel://+959777049552">09 777 049 552</a><br>
+                        <small>Monday to Friday 9:00 am - 5:00 pm</small>
+                    </p>
+                </div>
+                <hr class="styled">
+                <div class="box_side">
+                    <h5>By Email</h5>
+                    <i class="icon_pencil-edit"></i>
+                    <p>
+                        <a href="mailto:kbtcschoolofit@kbtc.edu.mm">kbtcschoolofit@kbtc.edu.mm</a><br>
+                    </p>
+                </div>
+                <hr class="styled">
+                <div class="box_side">
+                    <h5>By Social Media</h5>
+                    <i class="icon-chat-5"></i>
+                    <p>
+                        <a href="https://www.facebook.com/KBTCUniversitySchoolofIT" target="_blank">Facebook</a><br>
+                        <a class="li-ic" href="https://www.linkedin.com/company/kbtc-college/" target="_blank">
+                            LinkedIn</a><br>
+                        <a class="ins-ic" href="https://www.instagram.com/kbtcuniversity_schoolofit/" target="_blank">
+                            Instagram</a>
+
+                    </p>
+                    <br>
+                </div>
+            </aside>
+        </div><!--End row -->
+    </div><!--End container -->
+
+{% endblock contents %}
+
+{% block specific_scripts %}
+    <script src="{% static 'backend/js/faq.js' %}"></script>
+{% endblock specific_scripts %} %}

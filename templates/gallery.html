@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load static %}
+{% block contents %}
+     <div id="full-slider-wrapper">
+        <div id="layerslider" style="width:100%;height:650px;">
+            <!-- first slide -->
+            <div class="ls-slide">
+                <img src="{% static 'backend/img/slides/slide_1.jpg' %}" class="ls-bg" alt="Slide background">
+                <h3 class="ls-l slide_typo" style="top: 45%; left: 50%;"
+                    data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">
+                    KBTC campus <strong>Gallery</strong></h3>
+                <h4 class="ls-l slide_typo" style="top: 52%; left: 50%;"
+                    data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
+                    Check out the awesome photos we have taken at the KBTC campus
+                </h4>
+            </div>
+        </div>
+    </div><!-- End layerslider -->
+    <div id="position">
+        <div class="container">
+            <ul>
+                <li><a href="{% url 'backend:home' %}">Home</a></li>
+                <li>Gallery</li>
+            </ul>
+        </div>
+    </div><!-- Position -->
+
+    <div class="container margin_60">
+        <section class="grid">
+            <div class="main_title">
+                <h2>Here are some pictures ...</h2>
+            </div>
+            <div class="row">
+                <ul class="magnific-gallery">
+                    {% for img in data %}
+                        <li>
+                            <figure>
+                                {% image img.photo max-3000x2000 as photos %}
+                                <img src="{{ photos.url }}" alt="" style="height: 250px; width: 300px">
+                                <figcaption>
+                                    <div class="caption-content">
+                                        <a href="{{ photos.url }}" title="{{ img.caption }}"
+                                           data-effect="mfp-move-horizontal">
+                                            <i class="pe-7s-albums"></i>
+                                            <p>{{ img.caption }}</p>
+                                        </a>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </section>
+
+        {#        <section class="grid">#}
+        {#            <div class="container margin_60">#}
+        {#                <div class="main_title">#}
+        {#                    <h2>Here some videos ...</h2>#}
+        {#                    <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>#}
+        {#                </div>#}
+        {#                <div class="row">#}
+        {#                    <ul class="magnific-gallery">#}
+        {#                        <li>#}
+        {#                            <figure>#}
+        {#                                <img src="{% static 'backend/img/gallery/pic_2.jpg' %}" alt="">#}
+        {#                                <figcaption>#}
+        {#                                    <div class="caption-content">#}
+        {#                                        <a href="https://vimeo.com/45830194" class="video_pop" title="Video Vimeo">#}
+        {#                                            <i class="pe-7s-film"></i>#}
+        {#                                            <p>Your caption</p>#}
+        {#                                        </a>#}
+        {#                                    </div>#}
+        {#                                </figcaption>#}
+        {#                            </figure>#}
+        {#                        </li>#}
+        {##}
+        {#                        <li>#}
+        {#                            <figure>#}
+        {#                                <img src="{% static 'backend/img/gallery/pic_13.jpg' %}" alt="">#}
+        {#                                <figcaption>#}
+        {#                                    <div class="caption-content">#}
+        {#                                        <a href="https://www.youtube.com/watch?v=Zz5cu72Gv5Y" class="video_pop"#}
+        {#                                           title="Video Youtube">#}
+        {#                                            <i class="pe-7s-film"></i>#}
+        {#                                            <p>Your caption</p>#}
+        {#                                        </a>#}
+        {#                                    </div>#}
+        {#                                </figcaption>#}
+        {#                            </figure>#}
+        {#                        </li>#}
+        {#                        <li>#}
+        {#                            <figure>#}
+        {#                                <img src="img/gallery/pic_4.jpg" alt="">#}
+        {#                                <figcaption>#}
+        {#                                    <div class="caption-content">#}
+        {#                                        <a href="https://vimeo.com/45830194" class="video_pop" title="Video Vimeo">#}
+        {#                                            <i class="pe-7s-film"></i>#}
+        {#                                            <p>Your caption</p>#}
+        {#                                        </a>#}
+        {#                                    </div>#}
+        {#                                </figcaption>#}
+        {#                            </figure>#}
+        {#                        </li>#}
+        {#                    </ul>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </section>#}
+    </div>
+{% endblock contents %}

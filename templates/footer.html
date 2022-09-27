@@ -1,0 +1,84 @@
+{% load static %}
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <p id="logo_footer">
+                    <img src="{% static 'backend/img/logo.png' %}" width="125" height="125" alt="KBTC"
+                         data-retina="true">
+                </p>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="{% url 'backend:about' %}">About us</a></li>
+                    <li><a href="{% url 'backend:FAQ' %}">FAQ</a></li>
+                    <li><a href="{% url 'backend:gallery' %}">Gallery</a></li>
+                    <li><a href="#">Terms and condition</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <h4>Academic</h4>
+                <ul>
+                    {% for degree in degrees %}
+                        <li><a href="#">{{ degree.degreeName }}</a></li>
+                    {% endfor %}
+                    {#                    <li><a href="#">Plans of study</a></li>#}
+                    {#                    <li><a href="#">Courses</a></li>#}
+                    {#                    <li><a href="#">Admissions</a></li>#}
+                    {#                    <li><a href="#">Staff</a></li>#}
+                    {#                    <li><a href="#">Students</a></li>#}
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <h4>Contact us</h4>
+                <ul>
+                    <li><a href="{% url 'backend:contact' %}">Contacts</a></li>
+                    <li><a href="#">Plan a visit</a></li>
+                </ul>
+                <ul id="contacts_footer">
+                    <li>Info line:
+                        <ul><a href="tel://+959799606898">09 799 606 898</a><br>
+                            <a href="tel://+959777049551">09 777 049 551</a><br>
+                            <a href="tel://+959777049552">09 777 049 552</a><br></ul>
+                    </li>
+
+                    <li>Email - <a href="mailto:kbtcschoolofit@kbtc.edu.mm">kbtcschoolofit@kbtc.edu.mm</a></li>
+                </ul>
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-lg-12 col-centered" style="font-size: 32px">
+                        <!-- Facebook -->
+                        <a class="fb-ic" href="https://www.facebook.com/KBTCUniversitySchoolofIT" target="_blank">
+                            <i class="social_facebook_square"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic" href="https://www.linkedin.com/company/kbtc-college/" target="_blank">
+                            <i class="social_linkedin_square"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic" href="https://www.instagram.com/kbtcuniversity_schoolofit/" target="_blank">
+                            <i class="social_instagram_square"> </i>
+                        </a>
+                        <!--Youtube-->
+                        <a class="youtube-ic" href="https://www.youtube.com/channel/UCFGBIJXXVhvdRB5UWwADMZw"
+                           target="_blank">
+                            <i class="social_youtube_square"> </i>
+                        </a>
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+            </div>
+        </div><!-- End row -->
+        <!-- Grid row-->
+    </div><!-- End container -->
+</footer><!-- End footer -->
+<div id="copy">
+    <div class="container">
+        © KBTC
+        <script>document.write(new Date().getFullYear())</script>
+        - All rights reserved.
+    </div>
+</div><!-- End copy -->

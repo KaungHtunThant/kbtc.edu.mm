@@ -1,0 +1,8 @@
+{% extends 'academic_single_course.html' %}
+{% block breadcrumb %}
+    <ul>
+        <li><a href="{% url 'backend:home' %}">Home</a></li>
+        <li><a href="{% url 'backend:degrees' degree level %}">{{ degree }} ({{ level }})</a></li>
+        <li>{{ course }}</li>
+    </ul>
+{% endblock breadcrumb %}
